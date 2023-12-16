@@ -1,12 +1,13 @@
 <script setup>
+import { ref } from 'vue';
+import ShoppingList from './components/ShoppingList.vue';
 </script>
 
 <template>
   <div>
     <h1>Vue Shopping List</h1>
-    <!-- your code here -->
+    <ShoppingList />
   </div>
 </template>
-
 <style scoped>
 </style>
