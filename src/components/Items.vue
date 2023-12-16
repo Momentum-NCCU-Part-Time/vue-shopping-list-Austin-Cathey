@@ -7,9 +7,5 @@ defineProps
 </script>
 
 <template>
-<ul>
-    <li v-for="item in items" :key="item.id">{{  }}
-    {{ list.items.item-name }}
-    </li>
-</ul>
+
 </template>

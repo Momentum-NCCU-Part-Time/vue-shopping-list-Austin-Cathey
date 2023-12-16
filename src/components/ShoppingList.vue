@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import Items from './Items.vue'
 
 const lists = ref([]);
 
@@ -17,8 +18,14 @@ fetch("http://localhost:3000/lists/", {
     <div v-for="list in lists" :key="list.id">
     {{ list.title }}
     <ul>
+       <!--  <Items
+        v-for="item in lists" 
+        :key="item.id"
+        :item="item.item-name"
+        /> -->
         <li v-for="item in lists" :key="item.id">
-            {{ list.items.item-name }}
+            {{ item.items.item-name }}
+            {{ console.log(item.item-name) }}
             
         </li>
     </ul>
