@@ -1,8 +1,10 @@
 <script setup>
 import { ref } from 'vue';
 import Items from './Items.vue'
+import NewItem from './NewItem.vue';
 
 const lists = ref([]);
+const purchased = ref(false);
 
 fetch("http://localhost:3000/lists/", {
     method: "GET",
@@ -17,9 +19,12 @@ fetch("http://localhost:3000/lists/", {
 
     <div v-for="list in lists" :key="list.id">
     {{ list.title }}
+    <br/>
+    <NewItem 
+    :list="list"/>
     <li v-for="item in list.items" :key="item.id">
-            {{ item.id }}
-            {{ console.log(item) }}
+            {{ item.itemName}}
+           <input v-model="purchased" type="checkbox">
         </li>
     </div>
     <ul>
