@@ -3,9 +3,11 @@ import { ref } from 'vue'
 
 const props =
 defineProps
-({item: Object});
+({item: String});
 </script>
 
 <template>
-
+<div>
+    {{ props.item }}
+</div>
 </template>

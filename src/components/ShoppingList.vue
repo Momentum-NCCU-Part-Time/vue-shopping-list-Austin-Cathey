@@ -17,18 +17,20 @@ fetch("http://localhost:3000/lists/", {
 
     <div v-for="list in lists" :key="list.id">
     {{ list.title }}
+    <li v-for="item in list.items" :key="item.id">
+            {{ item.id }}
+            {{ console.log(item) }}
+        </li>
+    </div>
     <ul>
-       <!--  <Items
+        <!-- <Items
         v-for="item in lists" 
         :key="item.id"
-        :item="item.item-name"
-        /> -->
-        <li v-for="item in lists" :key="item.id">
-            {{ item.items.item-name }}
-            {{ console.log(item.item-name) }}
-            
-        </li>
+        :item=""
+        />
+        {{ console.log(item) }} -->
+        
     </ul>
-    </div>
+    
 
 </template>
