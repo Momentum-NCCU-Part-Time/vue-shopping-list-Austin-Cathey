@@ -21,11 +21,13 @@ fetch("http://localhost:3000/lists/", {
     <div v-for="list in lists" :key="list.id">
     {{ list.title }}
     <br/>
-    <NewItem />
+    
     <li v-for="item in list.items" :key="item.id">
             {{ item.itemName}}
            <input v-model="purchased" type="checkbox">
         </li>
+        <NewItem 
+    :list="lists" />
     </div>
     <ul>
         <!-- <Items

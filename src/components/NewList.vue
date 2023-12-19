@@ -7,11 +7,11 @@ const addNewList = () => {
   fetch("http://localhost:3000/lists/", {
     method: "POST",
     headers: {"Content-Type": "application/json"},
-    body:JSON.stringify({ title: newList.value, items: [] }),
+    body:JSON.stringify({ title: newList.value, items: [], updatedAt: new Date() }),
   })
   .then((res) => res.json())
   .then((list) => {
-    /* emit("itemAdded", item) */
+    /* emit("listAdded", list) */
     resetList()
   });
 };

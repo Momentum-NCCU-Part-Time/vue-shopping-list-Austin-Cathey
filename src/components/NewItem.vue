@@ -6,8 +6,8 @@ defineProps
 ({list: Object});
 
 const addNewItem = () => {
-  fetch("http://localhost:3000/lists/" + props.items, {
-    method: "POST",
+  fetch("http://localhost:3000/lists/" + props.id, {
+    method: "PATCH",
     headers: {"Content-Type": "application/json"},
     body:JSON.stringify({ itemName: newItem.value, purchased: "false" }),
   })
