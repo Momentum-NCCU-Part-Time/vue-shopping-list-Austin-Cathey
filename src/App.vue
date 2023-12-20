@@ -1,6 +1,6 @@
 <script setup>
-import { ref } from 'vue';
-import ShoppingList from './components/ShoppingList.vue';
+import { ref } from 'vue'
+import ShoppingList from './components/ShoppingList.vue'
 </script>
 
 <template>
@@ -9,5 +9,4 @@ import ShoppingList from './components/ShoppingList.vue';
     <ShoppingList />
   </div>
 </template>
-<style scoped>
-</style>
+<style scoped></style>
