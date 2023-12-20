@@ -6,16 +6,16 @@
       "items": [
         {
           "id": 1,
-          "itemName": "toilet paper",
+          "itemName": "beans",
+          "purchased": false
+        },
+        {
+          "id": 2,
+          "itemName": "peppers",
           "purchased": false
         }
       ],
       "updatedAt": "2018-01-01T00:00:00.000Z"
-    },
-    {
-      "title": "New Shopping List",
-      "items": [],
-      "id": 2
     }
   ]
 }
