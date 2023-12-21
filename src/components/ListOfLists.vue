@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import Lists from './Lists.vue'
 import Items from './Items.vue'
 import NewList from './NewList.vue'
 import NewItem from './NewItem.vue'
@@ -18,24 +19,15 @@ fetch('http://localhost:3000/lists/', {
 <template>
   <div>
     <NewList />
-
     <div v-for="list in lists" :key="list.id">
-      {{ list.title }}
-      <br />
+      <Lists :list="list" />
       <ul>
-        <li v-for="item in list.items" :key="item.id">
-          {{ item.itemName }}
-          <input v-model="purchased" type="checkbox" />
-          <NewItem :itemProp="item" :list="list" />
+        <li v-for="items in list.items" key="list.items.id">
+          {{ items.itemName }}
         </li>
       </ul>
+      <!-- <Items :key="list.items.id" :item="list.items" /> -->
+      <!-- <NewItem :itemProp="item" :list="list" /> -->
     </div>
-
-    <!-- <Items
-        v-for="item in lists" 
-        :key="item.id"
-        :item=""
-        />
-        {{ console.log(item) }} -->
   </div>
 </template>
