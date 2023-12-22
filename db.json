@@ -5,6 +5,29 @@
       "title": "Sample shopping list",
       "items": [
         {
+          "id": 2,
+          "itemName": "vegan nuggets",
+          "purchased": false
+        },
+        {
+          "id": 2,
+          "itemName": "milk",
+          "purchased": false
+        },
+        {
+          "id": 3,
+          "itemName": "rice",
+          "purchased": false
+        }
+      ],
+      "updatedAt": "2023-12-22T01:48:56.103Z",
+      "itemName": "milk",
+      "purchased": "false"
+    },
+    {
+      "title": "New Test List",
+      "items": [
+        {
           "id": 1,
           "itemName": "beans",
           "purchased": false
@@ -15,13 +38,6 @@
           "purchased": false
         }
       ],
-      "updatedAt": "2018-01-01T00:00:00.000Z",
-      "itemName": "milk",
-      "purchased": "false"
-    },
-    {
-      "title": "New Test List",
-      "items": [],
       "updatedAt": "2023-12-21T18:03:03.297Z",
       "id": 2
     }
