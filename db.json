@@ -18,9 +18,14 @@
           "id": 3,
           "itemName": "rice",
           "purchased": false
+        },
+        {
+          "id": 4,
+          "itemName": "cheese",
+          "purchased": false
         }
       ],
-      "updatedAt": "2023-12-22T01:48:56.103Z",
+      "updatedAt": "2023-12-25T18:37:41.156Z",
       "itemName": "milk",
       "purchased": "false"
     },
@@ -36,9 +41,19 @@
           "id": 2,
           "itemName": "peppers",
           "purchased": false
+        },
+        {
+          "id": 3,
+          "itemName": "rice",
+          "purchased": false
+        },
+        {
+          "id": 4,
+          "itemName": "berries",
+          "purchased": false
         }
       ],
-      "updatedAt": "2023-12-21T18:03:03.297Z",
+      "updatedAt": "2023-12-25T18:38:45.704Z",
       "id": 2
     }
   ]

@@ -15,29 +15,6 @@ fetch('http://localhost:3000/lists/', {
 })
   .then((res) => res.json())
   .then((data) => (lists.value = data))
-
-const addNewItem = (list) => {
-  fetch('http://localhost:3000/lists/' + list.id, {
-    method: 'PATCH',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      title: list.title,
-      items: [
-        ...list.items,
-        {
-          id: list.items.length + 1,
-          itemName: newItem.value,
-          purchased: false
-        }
-      ],
-      updatedAt: new Date()
-    })
-  })
-    .then((res) => res.json())
-    .then((r) => {
-      /* resetItem() */
-    })
-}
 </script>
 
 <template>
@@ -45,10 +22,7 @@ const addNewItem = (list) => {
     <NewList />
     <div v-for="list in lists" :key="list.id">
       <ListItems :list="list" />
-      <form class="itemForm" @submit.prevent="addNewItem(list)">
-        <input v-model="newItem" type="text" placeholder="Add Item" />
-        <button type="submit">Add</button>
-      </form>
+      <NewItem :list="list" />
     </div>
   </div>
 </template>
