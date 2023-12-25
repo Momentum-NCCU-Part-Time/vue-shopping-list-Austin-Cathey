@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 const newList = ref('')
 
+const emit = defineEmits(['listAdded'])
+
 const addNewList = () => {
   fetch('http://localhost:3000/lists/', {
     method: 'POST',
@@ -9,8 +11,8 @@ const addNewList = () => {
     body: JSON.stringify({ title: newList.value, items: [], updatedAt: new Date() })
   })
     .then((res) => res.json())
-    .then((list) => {
-      /* emit("listAdded", list) */
+    .then((newList) => {
+      emit('listAdded', newList)
       resetList()
     })
 }

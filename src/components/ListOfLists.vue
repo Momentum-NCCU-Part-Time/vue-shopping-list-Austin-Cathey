@@ -24,18 +24,14 @@ const getLists = () => {
     .then((res) => res.json())
     .then((data) => (lists.value = data))
 }
-
-const addItem = () => {
-  getLists()
-}
 </script>
 
 <template>
   <div>
-    <NewList />
+    <NewList @listAdded="getLists" />
     <div v-for="list in lists" :key="list.id">
       <ListItems :list="list" />
-      <NewItem :list="list" @itemAdded="addItem" />
+      <NewItem :list="list" @itemAdded="getLists" />
     </div>
   </div>
 </template>
