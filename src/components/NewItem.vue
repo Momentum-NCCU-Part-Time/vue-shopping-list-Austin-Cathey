@@ -3,8 +3,7 @@ import { ref } from 'vue'
 const newItem = ref('')
 
 const props = defineProps({ list: Object })
-/* const existingItems = ref(props.list[items]) */
-/* console.log(existingItems.value) */
+const emit = defineEmits(['itemAdded'])
 
 const addNewItem = (list) => {
   fetch('http://localhost:3000/lists/' + props.list.id, {
@@ -24,8 +23,8 @@ const addNewItem = (list) => {
     })
   })
     .then((res) => res.json())
-    .then((r) => {
-      console.log(r)
+    .then((addedItem) => {
+      emit('itemAdded', addedItem)
       resetItem()
     })
 }

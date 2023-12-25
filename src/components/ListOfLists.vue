@@ -15,6 +15,19 @@ fetch('http://localhost:3000/lists/', {
 })
   .then((res) => res.json())
   .then((data) => (lists.value = data))
+
+const getLists = () => {
+  fetch('http://localhost:3000/lists/', {
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' }
+  })
+    .then((res) => res.json())
+    .then((data) => (lists.value = data))
+}
+
+const addItem = () => {
+  getLists()
+}
 </script>
 
 <template>
@@ -22,7 +35,7 @@ fetch('http://localhost:3000/lists/', {
     <NewList />
     <div v-for="list in lists" :key="list.id">
       <ListItems :list="list" />
-      <NewItem :list="list" />
+      <NewItem :list="list" @itemAdded="addItem" />
     </div>
   </div>
 </template>
