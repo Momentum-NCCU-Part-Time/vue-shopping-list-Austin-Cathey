@@ -19,7 +19,7 @@ const togglePurchased = (items) => {
       :class="{ strikeout: items.purchased }"
     >
       {{ items.itemName }}
-      <!--       <input v-model="purchased" type="checkbox" /> -->
+      <input v-model="items.purchased" type="checkbox" />
     </li>
   </ul>
 </template>
