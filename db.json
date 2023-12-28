@@ -61,9 +61,14 @@
           "id": 4,
           "itemName": "berries",
           "purchased": false
+        },
+        {
+          "id": 5,
+          "itemName": "detergent",
+          "purchased": false
         }
       ],
-      "updatedAt": "2023-12-25T18:38:45.704Z",
+      "updatedAt": "2023-12-28T16:27:20.956Z",
       "id": 2
     }
   ]

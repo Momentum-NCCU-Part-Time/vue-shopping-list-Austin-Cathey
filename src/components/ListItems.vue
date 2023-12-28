@@ -35,10 +35,10 @@ const doEdit = (e) => {
 </script>
 
 <template>
-  <h3>{{ props.list.title }}</h3>
-  <p>Total Items: {{ props.list.items.length }}</p>
+  <h3>{{ props.list.title }}: {{ props.list.items.length }} Items</h3>
+  <!--  <p>Total Items: {{ props.list.items.length }}</p> -->
   <button v-if="editing" @click="doEdit(false)">Cancel</button>
-  <button v-else @click="doEdit(true)">Edit List</button>
+  <button v-else @click="doEdit(true)">Show List</button>
   <ul v-if="editing">
     <li
       v-for="items in props.list.items"
