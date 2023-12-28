@@ -28,9 +28,14 @@
           "id": 5,
           "itemName": "tortillas",
           "purchased": false
+        },
+        {
+          "id": 6,
+          "itemName": "shirts",
+          "purchased": false
         }
       ],
-      "updatedAt": "2023-12-25T18:47:12.484Z",
+      "updatedAt": "2023-12-27T21:48:14.616Z",
       "itemName": "milk",
       "purchased": "false"
     },
@@ -60,24 +65,6 @@
       ],
       "updatedAt": "2023-12-25T18:38:45.704Z",
       "id": 2
-    },
-    {
-      "title": "Food Lion",
-      "items": [
-        {
-          "id": 1,
-          "itemName": "cherries",
-          "purchased": false
-        }
-      ],
-      "updatedAt": "2023-12-25T19:00:54.369Z",
-      "id": 3
-    },
-    {
-      "title": "Whole Foods",
-      "items": [],
-      "updatedAt": "2023-12-25T19:01:01.824Z",
-      "id": 4
     }
   ]
 }

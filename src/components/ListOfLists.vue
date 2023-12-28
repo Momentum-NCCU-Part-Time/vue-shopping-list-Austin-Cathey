@@ -4,9 +4,9 @@ import ListItems from './ListItems.vue'
 import Items from './Items.vue'
 import NewList from './NewList.vue'
 import NewItem from './NewItem.vue'
+import Delete from './Delete.vue'
 
 const lists = ref([])
-const purchased = ref(false)
 const newItem = ref('')
 
 fetch('http://localhost:3000/lists/', {
@@ -31,6 +31,7 @@ const getLists = () => {
     <NewList @listAdded="getLists" />
     <div v-for="list in lists" :key="list.id">
       <ListItems :list="list" />
+      <Delete :list="list" @listDeleted="getLists" />
       <NewItem :list="list" @itemAdded="getLists" />
     </div>
   </div>
