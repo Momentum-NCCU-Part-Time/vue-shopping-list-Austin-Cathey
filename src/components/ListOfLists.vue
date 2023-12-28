@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 import ListItems from './ListItems.vue'
-import Items from './Items.vue'
 import NewList from './NewList.vue'
 import NewItem from './NewItem.vue'
 import Delete from './Delete.vue'

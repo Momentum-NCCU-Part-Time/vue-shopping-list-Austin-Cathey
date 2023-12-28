@@ -1,17 +1,45 @@
 <script setup>
 import { ref } from 'vue'
 
-/* const purchased = ref(false) */
 const props = defineProps({ list: Object })
+const emit = defineEmits(['itemPurchased'])
+const editing = ref(false)
 
 const togglePurchased = (items) => {
   items.purchased = !items.purchased
 }
+
+const doEdit = (e) => {
+  editing.value = e
+}
+/* const purchasedItem = (list) => {
+  fetch('http://localhost:3000/lists/' + props.list.items.id, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      title: props.list.title,
+      items: [
+        ...props.list.items,
+        {
+          purchased = !purchased
+        }
+      ]
+    })
+  })
+    .then((res) => res.json())
+    .then((purchasedItem) => {
+      emit('itemPurchased', purchasedItem)
+      resetItem()
+    })
+} */
 </script>
 
 <template>
   <h3>{{ props.list.title }}</h3>
-  <ul>
+  <p>Total Items: {{ props.list.items.length }}</p>
+  <button v-if="editing" @click="doEdit(false)">Cancel</button>
+  <button v-else @click="doEdit(true)">Edit List</button>
+  <ul v-if="editing">
     <li
       v-for="items in props.list.items"
       @click="togglePurchased(items)"
