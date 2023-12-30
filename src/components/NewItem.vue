@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 const newItem = ref('')
+const addingItem = ref(false)
 
 const props = defineProps({ list: Object })
 const emit = defineEmits(['itemAdded'])
@@ -29,14 +30,22 @@ const addNewItem = (list) => {
     })
 }
 
+const addItem = (e) => {
+  addingItem.value = e
+}
+
 const resetItem = () => {
   newItem.value = ''
 }
 </script>
 
 <template>
-  <form class="itemForm" @submit.prevent="addNewItem">
-    <input v-model="newItem" type="text" placeholder="Add Item" />
-    <button type="submit">Add</button>
-  </form>
+  <div>
+    <form v-if="addingItem" class="itemForm" @submit.prevent="addNewItem">
+      <input v-model="newItem" type="text" placeholder="Add Item" />
+      <button type="submit">Add</button>
+    </form>
+    <button v-if="addingItem" @click="addItem(false)">Cancel Item</button>
+    <button v-else @click="addItem(true)">Add Item</button>
+  </div>
 </template>

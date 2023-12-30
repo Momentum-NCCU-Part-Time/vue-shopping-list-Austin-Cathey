@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 const newList = ref('')
 
+const addingList = ref(false)
 const emit = defineEmits(['listAdded'])
 
 const addNewList = () => {
@@ -17,13 +18,19 @@ const addNewList = () => {
     })
 }
 
+const addList = (e) => {
+  addingList.value = e
+}
+
 const resetList = () => {
   newList.value = ''
 }
 </script>
 
 <template>
-  <form class="newList" @submit.prevent="addNewList">
+  <button v-if="addingList" @click="addList(false)">Nevermind</button>
+  <button v-else @click="addList(true)">New List</button>
+  <form v-if="addingList" class="newList" @submit.prevent="addNewList">
     <input v-model="newList" type="text" placeholder="New List Title" />
     <button type="submit">Add</button>
   </form>

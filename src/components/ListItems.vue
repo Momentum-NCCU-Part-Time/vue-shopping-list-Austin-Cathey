@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import Delete from './Delete.vue'
 
 const props = defineProps({ list: Object })
 const editing = ref(false)
@@ -28,21 +29,28 @@ const purchasedItem = (list) => {
 </script>
 
 <template>
-  <h3>{{ props.list.title }}: {{ props.list.items.length }} Items</h3>
-  <!--  <p>Total Items: {{ props.list.items.length }}</p> -->
-  <button v-if="editing" @click="doEdit(false)">Hide List</button>
-  <button v-else @click="doEdit(true)">Show List</button>
-  <ul v-if="editing">
-    <li
-      v-for="items in props.list.items"
-      @click="togglePurchased(items)"
-      :key="list.items.id"
-      :class="{ strikeout: items.purchased }"
-    >
-      {{ items.itemName }}
-      <input v-model="items.purchased" type="checkbox" />
-    </li>
-  </ul>
+  <div>
+    <h3>{{ props.list.title }}: {{ props.list.items.length }} Items</h3>
+    <!-- {{ props.list.updatedAt }} -->
+    <div>
+      <button v-if="editing" @click="doEdit(false)">Hide List</button>
+      <button v-else @click="doEdit(true)">Show List</button>
+      <div v-if="editing">
+        <ul>
+          <li
+            v-for="items in props.list.items"
+            @click="togglePurchased(items)"
+            :key="list.items.id"
+            :class="{ strikeout: items.purchased }"
+          >
+            {{ items.itemName }}
+            <input v-model="items.purchased" type="checkbox" />
+          </li>
+        </ul>
+        <!-- <delete :list="props.list" /> -->
+      </div>
+    </div>
+  </div>
 </template>
 
 <style>

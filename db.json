@@ -45,7 +45,7 @@
         {
           "id": 1,
           "itemName": "beans",
-          "purchased": false
+          "purchased": true
         },
         {
           "id": 2,
@@ -68,7 +68,7 @@
           "purchased": false
         }
       ],
-      "updatedAt": "2023-12-28T16:27:20.956Z",
+      "updatedAt": "2023-12-30T19:53:49.927Z",
       "id": 2
     }
   ]

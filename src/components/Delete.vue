@@ -23,9 +23,9 @@ function confirmDelete(e) {
 <template>
   <form>
     <button v-if="deleting" class="btn" @click="confirmDelete(false)">Keep List</button>
-    <button v-else class="confirmDeleteBtn" @click="confirmDelete(true)">Delete</button>
+    <button v-else class="confirmDeleteBtn" @click="confirmDelete(true)">Delete List</button>
     <form class="deleteButton" v-if="deleting" @click.prevent="deleteList(list)">
-      <button type="submit">No really, delete</button>
+      <button type="submit">No really, delete list</button>
     </form>
   </form>
 </template>
