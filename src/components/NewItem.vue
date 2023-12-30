@@ -29,28 +29,6 @@ const addNewItem = (list) => {
     })
 }
 
-/* const addNewItem = () => {
-  fetch('http://localhost:3000/lists/' + props.list.id, {
-    method: 'PATCH',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      title: props.list.title,
-      items: props.list.items.push({
-        id: props.itemProp.id,
-        itemName: newItem.value,
-        purchased: 'false'
-      }),
-      updatedAt: new Date()
-    })
-  })
-    .then((res) => res.json())
-    .then((item) => {
-      console.log()
-      emit("itemAdded", item)
-      resetItem()
-    })
-} */
-
 const resetItem = () => {
   newItem.value = ''
 }

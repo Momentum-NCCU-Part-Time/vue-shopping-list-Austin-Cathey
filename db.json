@@ -7,7 +7,7 @@
         {
           "id": 2,
           "itemName": "vegan nuggets",
-          "purchased": false
+          "purchased": true
         },
         {
           "id": 2,
@@ -35,7 +35,7 @@
           "purchased": false
         }
       ],
-      "updatedAt": "2023-12-27T21:48:14.616Z",
+      "updatedAt": "2023-12-30T19:43:39.022Z",
       "itemName": "milk",
       "purchased": "false"
     },
