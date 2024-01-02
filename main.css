@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.listPad {
+    margin: .5rem;
+    padding: .5rem;
+border: 5px solid red;
+border-radius: 10% 10% 10% 10%;
+display: flex;
+flex-wrap: wrap;
+}
+
+.lists {
+    margin: .5rem;
+border: 2px solid red;
+border-radius: 10% 10% 10% 10%;
+}
+

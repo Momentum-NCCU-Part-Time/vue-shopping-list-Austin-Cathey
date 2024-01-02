@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import NewListItems from './NewListItems.vue'
 const newList = ref('')
 
 const addingList = ref(false)
@@ -32,6 +33,13 @@ const resetList = () => {
   <button v-else @click="addList(true)">New List</button>
   <form v-if="addingList" class="newList" @submit.prevent="addNewList">
     <input v-model="newList" type="text" placeholder="New List Title" />
+    <!-- <div>
+      <NewListItems />
+      <NewListItems />
+      <NewListItems />
+      <NewListItems />
+      <NewListItems />
+    </div> -->
     <button type="submit">Add</button>
   </form>
 </template>
