@@ -33,14 +33,15 @@ flex-wrap: wrap;
 .newListBtn {
     background-color: rgb(98, 169, 169);
     color: black;
-    padding: 3px;
+    padding: 5px;
 }
 
 .newListsBtn {
     background-color: rgb(98, 169, 169);
     color: black;
-    padding: 3px;
+    padding: 5px;
     font-size: medium;
+    font-weight: 700;
     
 }
 
@@ -74,19 +75,19 @@ li {
 
 .newItemBtn {
     background-color: rgb(72, 70, 188);
-    padding: 3px;
+    padding: 5px;
     border-radius: 12px;
 }
 
 .deleteButton {
     background-color: rgb(169, 83, 83);
-    padding: 3px;
+    padding: 5px;
     border-radius: 12px;
 }
 
 .showButton {
     background-color: rgb(100, 171, 100);
-    padding: 3px;
+    padding: 5px;
     border-radius: 12px;
 }
 
