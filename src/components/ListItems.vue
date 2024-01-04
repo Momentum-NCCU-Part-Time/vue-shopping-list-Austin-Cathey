@@ -30,11 +30,12 @@ const purchasedItem = (list) => {
 
 <template>
   <div>
-    <h3>{{ props.list.title }}: {{ props.list.items.length }} Items</h3>
-    <!-- {{ props.list.updatedAt }} -->
+    <h3 class="listTitle">
+      {{ props.list.title }}: <em>{{ props.list.items.length }} Items</em>
+    </h3>
     <div>
-      <button v-if="editing" @click="doEdit(false)">Hide List</button>
-      <button v-else @click="doEdit(true)">Show List</button>
+      <button v-if="editing" @click="doEdit(false)" class="showButton">Hide List</button>
+      <button v-else @click="doEdit(true)" class="showButton">Show List</button>
       <div v-if="editing">
         <ul>
           <li
@@ -47,7 +48,6 @@ const purchasedItem = (list) => {
             <input v-model="items.purchased" type="checkbox" />
           </li>
         </ul>
-        <!-- <delete :list="props.list" /> -->
       </div>
     </div>
   </div>

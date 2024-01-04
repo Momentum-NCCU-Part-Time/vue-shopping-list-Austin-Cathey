@@ -26,8 +26,8 @@ const getLists = () => {
 </script>
 
 <template>
-  <div>
-    <NewList @listAdded="getLists" />
+  <div id="allLists">
+    <NewList @listAdded="getLists" class="newList" />
     <div class="listPad">
       <div class="lists" v-for="list in lists" :key="list.id">
         <ListItems :list="list" @listDeleted="getLists" />

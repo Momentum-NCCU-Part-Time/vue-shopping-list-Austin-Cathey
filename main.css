@@ -2,20 +2,100 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+*app {
+    display: flex;
+flex-wrap: wrap;
+}
+
+.header {
+    text-align: center;
+    background-color: rgb(75, 99, 99);
+    padding-bottom: .5rem;
+}
+
+*allLists {
+    display: flex;
+flex-wrap: wrap;
+}
+
+.newList {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.newListBtn {
+    background-color: rgb(98, 169, 169);
+    color: black;
+    padding: 3px;
+}
+
+.newListsBtn {
+    background-color: rgb(98, 169, 169);
+    color: black;
+    padding: 3px;
+    font-size: medium;
+    
 }
 
 .listPad {
     margin: .5rem;
     padding: .5rem;
-border: 5px solid red;
+border: 5px solid white;
 border-radius: 10% 10% 10% 10%;
 display: flex;
 flex-wrap: wrap;
+background-color: rgb(77, 110, 123);
+
 }
 
 .lists {
     margin: .5rem;
-border: 2px solid red;
+    padding: .5rem;
+border: 2px solid white;
 border-radius: 10% 10% 10% 10%;
+align-content: center;
+justify-content: center;
 }
 
+.newList {
+    margin-left: 1rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+.newItemBtn {
+    background-color: rgb(72, 70, 188);
+    padding: 3px;
+    border-radius: 12px;
+}
+
+.deleteButton {
+    background-color: rgb(169, 83, 83);
+    padding: 3px;
+    border-radius: 12px;
+}
+
+.showButton {
+    background-color: rgb(100, 171, 100);
+    padding: 3px;
+    border-radius: 12px;
+}
+
+.newForm {
+    background-color: white;
+    color: black;
+}
+
+.listTitle em {
+    color: orangered;
+    font-style: normal;
+}

@@ -12,12 +12,12 @@
         {
           "id": 2,
           "itemName": "milk",
-          "purchased": false
+          "purchased": true
         },
         {
           "id": 3,
           "itemName": "rice",
-          "purchased": false
+          "purchased": true
         },
         {
           "id": 4,
@@ -33,9 +33,16 @@
           "id": 6,
           "itemName": "shirts",
           "purchased": false
+        },
+        {
+          "id": 7,
+          "itemName": "More Cheese",
+          "purchased": false
         }
       ],
-      "updatedAt": "2023-12-30T19:43:39.022Z"
+      "updatedAt": "2024-01-03T00:47:39.054Z",
+      "itemName": "milk",
+      "purchased": "false"
     },
     {
       "title": "New Test List",
@@ -48,7 +55,7 @@
         {
           "id": 2,
           "itemName": "peppers",
-          "purchased": false
+          "purchased": true
         },
         {
           "id": 3,
@@ -64,9 +71,24 @@
           "id": 5,
           "itemName": "detergent",
           "purchased": false
+        },
+        {
+          "id": 6,
+          "itemName": "Socks",
+          "purchased": false
+        },
+        {
+          "id": 7,
+          "itemName": "Cherries",
+          "purchased": false
+        },
+        {
+          "id": 8,
+          "itemName": "tomatoes",
+          "purchased": false
         }
       ],
-      "updatedAt": "2023-12-30T19:53:49.927Z",
+      "updatedAt": "2024-01-04T16:29:22.218Z",
       "id": 2
     }
   ]

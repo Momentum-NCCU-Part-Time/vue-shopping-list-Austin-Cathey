@@ -29,17 +29,19 @@ const resetList = () => {
 </script>
 
 <template>
-  <button v-if="addingList" @click="addList(false)">Nevermind</button>
-  <button v-else @click="addList(true)">New List</button>
-  <form v-if="addingList" class="newList" @submit.prevent="addNewList">
-    <input v-model="newList" type="text" placeholder="New List Title" />
-    <!-- <div>
+  <div>
+    <button v-if="addingList" @click="addList(false)" class="newListBtn">Nevermind</button>
+    <button v-else @click="addList(true)" class="newListsBtn">New List</button>
+    <form v-if="addingList" class="newList" @submit.prevent="addNewList">
+      <input v-model="newList" type="text" class="newForm" placeholder="New List Title" />
+      <!-- <div>
       <NewListItems />
       <NewListItems />
       <NewListItems />
       <NewListItems />
       <NewListItems />
     </div> -->
-    <button type="submit">Add</button>
-  </form>
+      <button class="newListBtn" type="submit">Add</button>
+    </form>
+  </div>
 </template>

@@ -42,10 +42,10 @@ const resetItem = () => {
 <template>
   <div>
     <form v-if="addingItem" class="itemForm" @submit.prevent="addNewItem">
-      <input v-model="newItem" type="text" placeholder="Add Item" />
-      <button type="submit">Add</button>
+      <input v-model="newItem" class="newForm" type="text" placeholder="Add Item" />
+      <button class="newItemBtn" type="submit">Add</button>
     </form>
-    <button v-if="addingItem" @click="addItem(false)">Cancel Item</button>
-    <button v-else @click="addItem(true)">Add Item</button>
+    <button v-if="addingItem" @click="addItem(false)" class="newItemBtn">Cancel Item</button>
+    <button v-else @click="addItem(true)" class="newItemBtn">Add Item</button>
   </div>
 </template>
