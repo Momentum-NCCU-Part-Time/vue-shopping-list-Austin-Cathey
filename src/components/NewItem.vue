@@ -1,13 +1,14 @@
 <script setup>
 import { ref } from 'vue'
 const newItem = ref('')
+const newItemQnty = ref('')
 const addingItem = ref(false)
 
 const props = defineProps({ list: Object })
 const emit = defineEmits(['itemAdded'])
 
-const addNewItem = (list) => {
-  fetch('http://localhost:3000/lists/' + props.list.id, {
+const addNewItem = () => {
+  fetch('http://localhost:3000/shoppinglists/' + props.list._id + '/items', {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -15,8 +16,8 @@ const addNewItem = (list) => {
       items: [
         ...props.list.items,
         {
-          id: props.list.items.length + 1,
-          itemName: newItem.value,
+          name: newItem.value,
+          quantity: newItemQnty.value,
           purchased: false
         }
       ],
@@ -36,6 +37,7 @@ const addItem = (e) => {
 
 const resetItem = () => {
   newItem.value = ''
+  newItemQnty.value = ''
 }
 </script>
 
@@ -43,6 +45,8 @@ const resetItem = () => {
   <div>
     <form v-if="addingItem" class="itemForm" @submit.prevent="addNewItem">
       <input v-model="newItem" class="newForm" type="text" placeholder="Add Item" />
+      <br />
+      <input v-model="newItemQnty" class="newForm" type="number" placeholder="Amount of" />
       <button class="newItemBtn" type="submit">Add</button>
     </form>
     <button v-if="addingItem" @click="addItem(false)" class="newItemBtn">Cancel Item</button>

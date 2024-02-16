@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: black;
+    background-color: rgb(36, 35, 35);
     color: white;
 }
 
@@ -53,6 +53,8 @@ border-radius: 10% 10% 10% 10%;
 display: flex;
 flex-wrap: wrap;
 background-color: rgb(77, 110, 123);
+height: 80vh;
+/* justify-content: center; */
 
 }
 
@@ -63,6 +65,8 @@ border: 2px solid white;
 border-radius: 10% 10% 10% 10%;
 align-content: center;
 justify-content: center;
+height: fit-content;
+width: fit-content;
 }
 
 .newList {

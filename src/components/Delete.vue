@@ -5,8 +5,8 @@ const deleting = ref(false)
 const props = defineProps({ list: Object })
 const emit = defineEmits(['listDeleted'])
 
-const deleteList = (list) => {
-  fetch('http://localhost:3000/lists/' + props.list.id, {
+const deleteList = () => {
+  fetch('http://localhost:3000/shoppinglists/' + props.list._id, {
     method: 'DELETE'
   })
     .then((res) => res.json())
@@ -24,7 +24,7 @@ function confirmDelete(e) {
   <form>
     <button v-if="deleting" @click="confirmDelete(false)" class="deleteButton">Keep List</button>
     <button v-else @click="confirmDelete(true)" class="deleteButton">Delete List</button>
-    <form v-if="deleting" @click.prevent="deleteList(list)">
+    <form v-if="deleting" @click.prevent="deleteList">
       <button type="submit" class="deleteButton">No really, delete list</button>
     </form>
   </form>
