@@ -15,7 +15,7 @@ const doEdit = (e) => {
   editing.value = e
 }
 const purchasedItem = () => {
-  fetch('http://localhost:3000/shoppinglists/' + props.list._id, +'/items/', {
+  fetch('http://localhost:3000/shoppinglists/' + props.list._id + '/items/', {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
