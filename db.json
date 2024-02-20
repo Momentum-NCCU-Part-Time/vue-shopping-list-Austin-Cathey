@@ -1,0 +1,101 @@
+{
+  "lists": [
+    {
+      "id": 1,
+      "title": "Sample shopping list",
+      "items": [
+        {
+          "id": 2,
+          "itemName": "vegan nuggets",
+          "purchased": true
+        },
+        {
+          "id": 2,
+          "itemName": "milk",
+          "purchased": true
+        },
+        {
+          "id": 3,
+          "itemName": "rice",
+          "purchased": true
+        },
+        {
+          "id": 4,
+          "itemName": "cheese",
+          "purchased": false
+        },
+        {
+          "id": 5,
+          "itemName": "tortillas",
+          "purchased": false
+        },
+        {
+          "id": 6,
+          "itemName": "shirts",
+          "purchased": false
+        },
+        {
+          "id": 7,
+          "itemName": "More Cheese",
+          "purchased": false
+        }
+      ],
+      "updatedAt": "2024-01-03T00:47:39.054Z",
+      "itemName": "milk",
+      "purchased": "false"
+    },
+    {
+      "title": "New Test List",
+      "items": [
+        {
+          "id": 1,
+          "itemName": "beans",
+          "purchased": true
+        },
+        {
+          "id": 2,
+          "itemName": "peppers",
+          "purchased": true
+        },
+        {
+          "id": 3,
+          "itemName": "rice",
+          "purchased": false
+        },
+        {
+          "id": 4,
+          "itemName": "berries",
+          "purchased": false
+        },
+        {
+          "id": 5,
+          "itemName": "detergent",
+          "purchased": false
+        },
+        {
+          "id": 6,
+          "itemName": "Socks",
+          "purchased": false
+        },
+        {
+          "id": 7,
+          "itemName": "Cherries",
+          "purchased": false
+        },
+        {
+          "id": 8,
+          "itemName": "tomatoes",
+          "purchased": false
+        }
+      ],
+      "updatedAt": "2024-01-04T16:29:22.218Z",
+      "id": 2
+    },
+    {
+      "title": "Food Lion",
+      "items": [],
+      "updatedAt": "2024-01-04T23:03:10.635Z",
+      "id": 3
+    }
+  ]
+}
