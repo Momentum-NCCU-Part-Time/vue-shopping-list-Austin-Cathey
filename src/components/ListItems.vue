@@ -8,13 +8,14 @@ const editing = ref(false)
 const togglePurchased = (item) => {
   item.purchased = !item.purchased
   purchasedItem(props.list)
+  console.log(item.purchased)
 }
 
 const doEdit = (e) => {
   editing.value = e
 }
 const purchasedItem = () => {
-  fetch('http://localhost:3000/shoppinglists/' + props.list._id, {
+  fetch('http://localhost:3000/shoppinglists/' + props.list._id, +'/items/', {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -40,9 +41,8 @@ const purchasedItem = () => {
         <ul>
           <li
             v-for="item in props.list.items"
-            v-if="props.list.items"
             @click="togglePurchased(item)"
-            :key="list.items._id"
+            :key="props.list.items._id"
             :class="{
               strikeout: item.purchased
             }"
